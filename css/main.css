@@ -1,0 +1,92 @@
+body {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.trace-group {
+    padding: 15px;
+    cursor: default;
+}
+
+.trace-group .inst-name {
+    font-size: 20px;
+}
+
+.trace-group .endpoint {
+    margin-top: 10px;
+}
+
+.trace-group .method {
+    font-weight: bold;
+}
+
+.trace-group .url {
+    margin-left: 20px;
+}
+
+.trace-group .time {
+    margin-top: 10px;
+}
+
+.trace-bar, .trace-bar * {
+    position: relative;
+}
+
+.trace-bar .bar-row {
+    border-bottom: 1px solid #dddddd;
+}
+
+.trace-bar .left-pane {
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 0;
+    width: 200px;
+    line-height: 30px;
+    padding: 10px 0;
+}
+
+.trace-bar .right-pane {
+    margin-left: 200px;
+    border-left: 1px solid #dddddd;
+    padding: 10px 0;
+}
+
+.trace-bar .bar-wrapper{
+    padding: 0 5px;
+}
+
+.trace-bar .bar {
+    position: relative;
+    background-color: cadetblue;
+    top: 0;
+    height: 30px;
+}
+
+.trace-bar .child-container {
+}
+
+#trace-tree-view {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    padding-top: 30px;
+}
+
+#trace-tree-view .container{
+    border-top: 1px solid #dddddd;
+}
+
+#trace-tree-view .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+}

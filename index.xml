@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="MSF4J Message Tracing" height="700" description="MSF4J Tracing">
+        <Require feature="dynamic-height"/>
+        <Require feature="setprefs"/>
+    </ModulePrefs>
+    <UserPref name="tracelastmins" display_name="Trace Last Minutes" default_value="10"/>
+    <Content type="html">
+        <![CDATA[
+        <head>
+            <link type="text/css" rel="stylesheet" href="css/main.css" media="all">
+            <script language="javascript" type="text/javascript" src="js/libs/jquery-3.1.0.js"></script>
+            <script language="javascript" type="text/javascript" src="js/libs/jquery.base64.js"></script>
+            <script language="javascript" type="text/javascript" src="js/libs/mustache.js"></script>
+            <script language="javascript" type="text/javascript" src="js/main.js"></script>
+        <head>
+        <body>
+            <div id="results"></div>
+            <div id="trace-tree-view">
+                <div class="close">Close</div>
+                <div class="container">
+
+                </div>
+            </div>
+            <script id="trace-group" type="x-tmpl-mustache">
+                <div class="trace-group">
+                    <div class="inst-name">{{origin.instanceName}}</div>
+                    <div class="endpoint">
+                        <span class="method">{{origin.httpMethod}}</span>
+                        <span class="url">{{origin.url}}</span></div>
+                    <div class="time">{{origin.timeStr}}</div>
+                </div>
+            </script>
+            <script id="trace-bar" type="x-tmpl-mustache">
+                <div class="trace-bar">
+                    <div class="bar-row">
+                        <div class="left-pane">Service-01</div>
+                        <div class="right-pane">
+                            <div class="bar-wrapper">
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-container">
+                    </div>
+                </div>
+            </script>
+        </body>
+        ]]>
+    </Content>
+</Module>
